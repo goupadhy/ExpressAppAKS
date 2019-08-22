@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: goupadhyexpressappaks 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: goupadhyexpressappaks 
+    spec:
+      containers:
+        - name: goupadhyexpressappaks 
+          image: readyaks.azurecr.io/goupadhyexpressappaks 
+          ports:
+          - containerPort: 80

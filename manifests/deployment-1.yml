@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksusernamecni-1a61"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksusernamecni-1a61"
+  template:
+    metadata:
+      labels:
+        app: "aksusernamecni-1a61"
+    spec:
+      containers:
+        - name: "aksusernamecni-1a61"
+          image: "acr2647.azurecr.io/aksusernamecni"
+          ports:
+          - containerPort: 8080
